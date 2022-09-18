@@ -14,7 +14,7 @@ app.set('view engine', 'ejs')
 app.use(indexRoute)
 
 app.use(express.static(join(__dirname,'public')))
-app.listen(3000, () =>
-  console.log('Example app listening on port 3000!'),
+app.listen(process.env.PORT || 3000, () =>
+  console.log('Example app listening on port',process.env.PORT|| '3000!'),
 
 );
